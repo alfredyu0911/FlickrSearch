@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlickrSearchDetailVC">
+            <connections>
+                <outlet property="btn_confirm" destination="d47-wS-681" id="9rq-Vk-knZ"/>
+                <outlet property="txt_page" destination="IsH-wX-XNf" id="30j-yw-m6h"/>
+                <outlet property="txt_text" destination="sS7-2M-0bZ" id="22V-RD-vgh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jx1-of-CfF">
+                    <rect key="frame" x="50" y="164" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="91E-Zf-QVn"/>
+                        <constraint firstAttribute="height" constant="50" id="aAI-kB-sFh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Per Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fH-Yg-Gz7">
+                    <rect key="frame" x="50" y="234" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Sxn-dN-xsM"/>
+                        <constraint firstAttribute="height" constant="50" id="ldI-UY-HKV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sS7-2M-0bZ">
+                    <rect key="frame" x="170" y="164" width="194" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="uNc-Rp-eDX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IsH-wX-XNf">
+                    <rect key="frame" x="170" y="234" width="194" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Fdp-oX-krG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d47-wS-681">
+                    <rect key="frame" x="50" y="334" width="314" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="qHv-sB-JhR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <state key="normal" title="Confirm"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flickr Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xq4-Wa-dmo">
+                    <rect key="frame" x="20" y="64" width="374" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="nkP-kg-TyI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="d47-wS-681" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="1va-qy-DAr"/>
+                <constraint firstItem="7fH-Yg-Gz7" firstAttribute="top" secondItem="jx1-of-CfF" secondAttribute="bottom" constant="20" id="BGG-Tp-K2T"/>
+                <constraint firstItem="xq4-Wa-dmo" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="K1a-hh-ovb"/>
+                <constraint firstItem="xq4-Wa-dmo" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="M2X-kX-gwy"/>
+                <constraint firstItem="IsH-wX-XNf" firstAttribute="top" secondItem="sS7-2M-0bZ" secondAttribute="bottom" constant="20" id="Rqn-kI-MMa"/>
+                <constraint firstItem="jx1-of-CfF" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="SGI-Ir-ft6"/>
+                <constraint firstItem="sS7-2M-0bZ" firstAttribute="top" secondItem="xq4-Wa-dmo" secondAttribute="bottom" constant="50" id="T3q-Qr-Vgz"/>
+                <constraint firstItem="7fH-Yg-Gz7" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="Vuv-3K-5tu"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="sS7-2M-0bZ" secondAttribute="trailing" constant="50" id="cJf-FI-doq"/>
+                <constraint firstItem="IsH-wX-XNf" firstAttribute="leading" secondItem="7fH-Yg-Gz7" secondAttribute="trailing" constant="20" id="dra-Ro-mNA"/>
+                <constraint firstItem="sS7-2M-0bZ" firstAttribute="leading" secondItem="jx1-of-CfF" secondAttribute="trailing" constant="20" id="g5l-fZ-dvI"/>
+                <constraint firstItem="jx1-of-CfF" firstAttribute="top" secondItem="xq4-Wa-dmo" secondAttribute="bottom" constant="50" id="hE6-0h-CEr"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="IsH-wX-XNf" secondAttribute="trailing" constant="50" id="qIo-QH-af5"/>
+                <constraint firstItem="d47-wS-681" firstAttribute="top" secondItem="7fH-Yg-Gz7" secondAttribute="bottom" constant="50" id="rhG-qU-7Vg"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="xq4-Wa-dmo" secondAttribute="trailing" constant="20" id="uEK-Q0-V1a"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="d47-wS-681" secondAttribute="trailing" constant="50" id="wEf-sq-9De"/>
+            </constraints>
+            <point key="canvasLocation" x="14" y="103"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
