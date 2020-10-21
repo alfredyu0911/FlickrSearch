@@ -1,20 +1,20 @@
 //
-//  FlickrSearchResultVC.m
+//  FSResultVC.m
 //  t5
 //
 //  Created by Alfred Yu on 2020/10/19.
 //
 
-#import "FlickrSearchResultVC.h"
-#import "FlickrPhotoCell.h"
-#import "FlickrPhoto.h"
+#import "FSResultVC.h"
+#import "FSResultCell.h"
+#import "FSPhoto.h"
 
 #define UIColorFromHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 const CGFloat kGap = 20.0;
 const NSInteger kColumns = 2;
 
-@interface FlickrSearchResultVC () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface FSResultVC () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UILabel *label_notFound;
@@ -22,7 +22,7 @@ const NSInteger kColumns = 2;
 
 @end
 
-@implementation FlickrSearchResultVC
+@implementation FSResultVC
 
 - (instancetype) initWithPhotoList:(NSMutableArray *)list
                            nibName:(NSString *)nibNameOrNil
@@ -35,6 +35,7 @@ const NSInteger kColumns = 2;
     }
     
     self.photoList = list;
+    self.str_notFound = @"Nothing Found !!";
     
     return self;
 }
@@ -45,7 +46,8 @@ const NSInteger kColumns = 2;
     
     if ( self.photoList.count > 0 )
         [self collectionViewInit];
-        
+
+    [self.label_notFound setText:self.str_notFound];
     [self.label_notFound setHidden:(self.photoList.count > 0 ? YES : NO)];
 }
 
@@ -61,7 +63,7 @@ const NSInteger kColumns = 2;
     self.collectionView.dataSource = self;
     self.collectionView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     
-    [self.collectionView registerNib:[UINib nibWithNibName:@"FlickrPhotoCell" bundle:nil] forCellWithReuseIdentifier:@"id_FlickrPhotoCell"];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"FSResultCell" bundle:nil] forCellWithReuseIdentifier:@"id_FSResultCell"];
 }
 
 #pragma mark - CollectionView datasource
@@ -79,14 +81,14 @@ const NSInteger kColumns = 2;
 - (UICollectionViewCell *) collectionView: (UICollectionView *)collectionView
                    cellForItemAtIndexPath: (NSIndexPath *)indexPath
 {
-    FlickrPhotoCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"id_FlickrPhotoCell" forIndexPath:indexPath];
+    FSResultCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"id_FSResultCell" forIndexPath:indexPath];
     
     if ( indexPath.row < self.photoList.count )
     {
         NSObject *obj = [self.photoList objectAtIndex:indexPath.row];
-        if ( [obj isKindOfClass:[FlickrPhoto class]] )
+        if ( [obj isKindOfClass:[FSPhoto class]] )
         {
-            FlickrPhoto *photoInfo = (FlickrPhoto *)obj;
+            FSPhoto *photoInfo = (FSPhoto *)obj;
             cell.label_id.text = photoInfo.photo_id;
             cell.label_owner.text = photoInfo.photo_owner;
             [cell loadImageWithInfo:photoInfo];

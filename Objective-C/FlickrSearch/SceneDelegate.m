@@ -6,7 +6,7 @@
 //
 
 #import "SceneDelegate.h"
-#import "FlickrSearchDetailVC.h"
+#import "FSInfoVC.h"
 
 @interface SceneDelegate ()
 
@@ -17,7 +17,7 @@
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions
 {
-    UIViewController *vc = [[FlickrSearchDetailVC alloc] init];
+    UIViewController *vc = [[FSInfoVC alloc] init];
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.windowScene = (UIWindowScene*)scene;

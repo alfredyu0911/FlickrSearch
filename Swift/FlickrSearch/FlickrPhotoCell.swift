@@ -12,6 +12,7 @@ class FlickrPhotoCell: UICollectionViewCell, FlickrPhoto_Delegate
     @IBOutlet weak var label_id: UILabel!
     @IBOutlet weak var label_owner: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var favorite: UIImageView!
     @IBOutlet weak var activityView: UIActivityIndicatorView!
     var photoInfo: FlickrPhoto?
     
@@ -21,6 +22,13 @@ class FlickrPhotoCell: UICollectionViewCell, FlickrPhoto_Delegate
         
         setLoadingComplete(status: false)
         imageViewInit()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(favIconOnClick))
+        favorite.isUserInteractionEnabled = true
+        favorite.addGestureRecognizer(tap)
+        
+        favorite.image = UIImage(systemName: "heart")
+        favorite.tag = 0
     }
 
     public func loadImage(photoinfo: FlickrPhoto)
@@ -55,12 +63,14 @@ class FlickrPhotoCell: UICollectionViewCell, FlickrPhoto_Delegate
         if status
         {
             imageView.isHidden = false
+            favorite.isHidden = false
             activityView.isHidden = true
             activityView.stopAnimating()
         }
         else
         {
             imageView.isHidden = true
+            favorite.isHidden = true
             activityView.isHidden = false
             activityView.startAnimating()
         }
@@ -77,6 +87,20 @@ class FlickrPhotoCell: UICollectionViewCell, FlickrPhoto_Delegate
         DispatchQueue.main.async
         {
             self.setPhoto()
+        }
+    }
+    
+    @objc private func favIconOnClick()
+    {
+        if favorite.tag == 0
+        {
+            favorite.image = UIImage(systemName: "heart.fill")
+            favorite.tag = 1
+        }
+        else
+        {
+            favorite.image = UIImage(systemName: "heart")
+            favorite.tag = 0
         }
     }
 }

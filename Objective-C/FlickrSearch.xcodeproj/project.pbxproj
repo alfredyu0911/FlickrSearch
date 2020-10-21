@@ -12,14 +12,18 @@
 		1D013F46253D6F68009AD484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D013F45253D6F68009AD484 /* Assets.xcassets */; };
 		1D013F49253D6F68009AD484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D013F47253D6F68009AD484 /* LaunchScreen.storyboard */; };
 		1D013F4C253D6F68009AD484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D013F4B253D6F68009AD484 /* main.m */; };
-		1D013F58253D70A6009AD484 /* FlickrSearchDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D013F56253D70A6009AD484 /* FlickrSearchDetailVC.m */; };
-		1D013F59253D70A6009AD484 /* FlickrSearchDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D013F57253D70A6009AD484 /* FlickrSearchDetailVC.xib */; };
+		1D013F58253D70A6009AD484 /* FSInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D013F56253D70A6009AD484 /* FSInfoVC.m */; };
+		1D013F59253D70A6009AD484 /* FSInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D013F57253D70A6009AD484 /* FSInfoVC.xib */; };
 		1D013F5E253D7AB8009AD484 /* FlickrApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D013F5D253D7AB8009AD484 /* FlickrApi.m */; };
-		1D013F62253D928D009AD484 /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D013F61253D928D009AD484 /* FlickrPhoto.m */; };
-		1D013F6E253D9940009AD484 /* FlickrSearchResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D013F6C253D9940009AD484 /* FlickrSearchResultVC.m */; };
-		1D013F6F253D9940009AD484 /* FlickrSearchResultVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D013F6D253D9940009AD484 /* FlickrSearchResultVC.xib */; };
-		1D71CC6C253DDE4D001BF9A3 /* FlickrPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D71CC6A253DDE4D001BF9A3 /* FlickrPhotoCell.m */; };
-		1D71CC6D253DDE4D001BF9A3 /* FlickrPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D71CC6B253DDE4D001BF9A3 /* FlickrPhotoCell.xib */; };
+		1D013F62253D928D009AD484 /* FSPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D013F61253D928D009AD484 /* FSPhoto.m */; };
+		1D013F6E253D9940009AD484 /* FSResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D013F6C253D9940009AD484 /* FSResultVC.m */; };
+		1D013F6F253D9940009AD484 /* FSResultVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D013F6D253D9940009AD484 /* FSResultVC.xib */; };
+		1D6770422540131A00217475 /* FSFavoriteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6770402540131A00217475 /* FSFavoriteVC.m */; };
+		1D6770432540131A00217475 /* FSFavoriteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6770412540131A00217475 /* FSFavoriteVC.xib */; };
+		1D71CC6C253DDE4D001BF9A3 /* FSResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D71CC6A253DDE4D001BF9A3 /* FSResultCell.m */; };
+		1D71CC6D253DDE4D001BF9A3 /* FSResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D71CC6B253DDE4D001BF9A3 /* FSResultCell.xib */; };
+		1DC400BB253FFF3300E848B4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC400BA253FFF1900E848B4 /* libsqlite3.tbd */; };
+		1DC400C22540019F00E848B4 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC400C12540019F00E848B4 /* DataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,19 +36,25 @@
 		1D013F48253D6F68009AD484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D013F4A253D6F68009AD484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D013F4B253D6F68009AD484 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1D013F55253D70A6009AD484 /* FlickrSearchDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrSearchDetailVC.h; sourceTree = "<group>"; };
-		1D013F56253D70A6009AD484 /* FlickrSearchDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrSearchDetailVC.m; sourceTree = "<group>"; };
-		1D013F57253D70A6009AD484 /* FlickrSearchDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlickrSearchDetailVC.xib; sourceTree = "<group>"; };
+		1D013F55253D70A6009AD484 /* FSInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSInfoVC.h; sourceTree = "<group>"; };
+		1D013F56253D70A6009AD484 /* FSInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSInfoVC.m; sourceTree = "<group>"; };
+		1D013F57253D70A6009AD484 /* FSInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSInfoVC.xib; sourceTree = "<group>"; };
 		1D013F5C253D7AB8009AD484 /* FlickrApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrApi.h; sourceTree = "<group>"; };
 		1D013F5D253D7AB8009AD484 /* FlickrApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrApi.m; sourceTree = "<group>"; };
-		1D013F60253D928D009AD484 /* FlickrPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrPhoto.h; sourceTree = "<group>"; };
-		1D013F61253D928D009AD484 /* FlickrPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrPhoto.m; sourceTree = "<group>"; };
-		1D013F6B253D9940009AD484 /* FlickrSearchResultVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrSearchResultVC.h; sourceTree = "<group>"; };
-		1D013F6C253D9940009AD484 /* FlickrSearchResultVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrSearchResultVC.m; sourceTree = "<group>"; };
-		1D013F6D253D9940009AD484 /* FlickrSearchResultVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlickrSearchResultVC.xib; sourceTree = "<group>"; };
-		1D71CC69253DDE4D001BF9A3 /* FlickrPhotoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrPhotoCell.h; sourceTree = "<group>"; };
-		1D71CC6A253DDE4D001BF9A3 /* FlickrPhotoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotoCell.m; sourceTree = "<group>"; };
-		1D71CC6B253DDE4D001BF9A3 /* FlickrPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlickrPhotoCell.xib; sourceTree = "<group>"; };
+		1D013F60253D928D009AD484 /* FSPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSPhoto.h; sourceTree = "<group>"; };
+		1D013F61253D928D009AD484 /* FSPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPhoto.m; sourceTree = "<group>"; };
+		1D013F6B253D9940009AD484 /* FSResultVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSResultVC.h; sourceTree = "<group>"; };
+		1D013F6C253D9940009AD484 /* FSResultVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSResultVC.m; sourceTree = "<group>"; };
+		1D013F6D253D9940009AD484 /* FSResultVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSResultVC.xib; sourceTree = "<group>"; };
+		1D67703F2540131A00217475 /* FSFavoriteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSFavoriteVC.h; sourceTree = "<group>"; };
+		1D6770402540131A00217475 /* FSFavoriteVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSFavoriteVC.m; sourceTree = "<group>"; };
+		1D6770412540131A00217475 /* FSFavoriteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSFavoriteVC.xib; sourceTree = "<group>"; };
+		1D71CC69253DDE4D001BF9A3 /* FSResultCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSResultCell.h; sourceTree = "<group>"; };
+		1D71CC6A253DDE4D001BF9A3 /* FSResultCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSResultCell.m; sourceTree = "<group>"; };
+		1D71CC6B253DDE4D001BF9A3 /* FSResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSResultCell.xib; sourceTree = "<group>"; };
+		1DC400BA253FFF1900E848B4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		1DC400C02540019F00E848B4 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		1DC400C12540019F00E848B4 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DC400BB253FFF3300E848B4 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +74,7 @@
 			children = (
 				1D013F38253D6F67009AD484 /* FlickrSearch */,
 				1D013F37253D6F67009AD484 /* Products */,
+				1DC400B9253FFF1900E848B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,25 +93,38 @@
 				1D013F3A253D6F67009AD484 /* AppDelegate.m */,
 				1D013F3C253D6F67009AD484 /* SceneDelegate.h */,
 				1D013F3D253D6F67009AD484 /* SceneDelegate.m */,
-				1D013F55253D70A6009AD484 /* FlickrSearchDetailVC.h */,
-				1D013F56253D70A6009AD484 /* FlickrSearchDetailVC.m */,
-				1D013F57253D70A6009AD484 /* FlickrSearchDetailVC.xib */,
+				1D013F55253D70A6009AD484 /* FSInfoVC.h */,
+				1D013F56253D70A6009AD484 /* FSInfoVC.m */,
+				1D013F57253D70A6009AD484 /* FSInfoVC.xib */,
 				1D013F5C253D7AB8009AD484 /* FlickrApi.h */,
 				1D013F5D253D7AB8009AD484 /* FlickrApi.m */,
-				1D013F60253D928D009AD484 /* FlickrPhoto.h */,
-				1D013F61253D928D009AD484 /* FlickrPhoto.m */,
-				1D013F6B253D9940009AD484 /* FlickrSearchResultVC.h */,
-				1D013F6C253D9940009AD484 /* FlickrSearchResultVC.m */,
-				1D013F6D253D9940009AD484 /* FlickrSearchResultVC.xib */,
-				1D71CC69253DDE4D001BF9A3 /* FlickrPhotoCell.h */,
-				1D71CC6A253DDE4D001BF9A3 /* FlickrPhotoCell.m */,
-				1D71CC6B253DDE4D001BF9A3 /* FlickrPhotoCell.xib */,
+				1D013F60253D928D009AD484 /* FSPhoto.h */,
+				1D013F61253D928D009AD484 /* FSPhoto.m */,
+				1D013F6B253D9940009AD484 /* FSResultVC.h */,
+				1D013F6C253D9940009AD484 /* FSResultVC.m */,
+				1D013F6D253D9940009AD484 /* FSResultVC.xib */,
+				1D67703F2540131A00217475 /* FSFavoriteVC.h */,
+				1D6770402540131A00217475 /* FSFavoriteVC.m */,
+				1D6770412540131A00217475 /* FSFavoriteVC.xib */,
+				1D71CC69253DDE4D001BF9A3 /* FSResultCell.h */,
+				1D71CC6A253DDE4D001BF9A3 /* FSResultCell.m */,
+				1D71CC6B253DDE4D001BF9A3 /* FSResultCell.xib */,
+				1DC400C02540019F00E848B4 /* DataManager.h */,
+				1DC400C12540019F00E848B4 /* DataManager.m */,
 				1D013F45253D6F68009AD484 /* Assets.xcassets */,
 				1D013F47253D6F68009AD484 /* LaunchScreen.storyboard */,
 				1D013F4A253D6F68009AD484 /* Info.plist */,
 				1D013F4B253D6F68009AD484 /* main.m */,
 			);
 			path = FlickrSearch;
+			sourceTree = "<group>";
+		};
+		1DC400B9253FFF1900E848B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DC400BA253FFF1900E848B4 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,9 +184,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D013F49253D6F68009AD484 /* LaunchScreen.storyboard in Resources */,
-				1D013F59253D70A6009AD484 /* FlickrSearchDetailVC.xib in Resources */,
-				1D71CC6D253DDE4D001BF9A3 /* FlickrPhotoCell.xib in Resources */,
-				1D013F6F253D9940009AD484 /* FlickrSearchResultVC.xib in Resources */,
+				1D013F59253D70A6009AD484 /* FSInfoVC.xib in Resources */,
+				1D71CC6D253DDE4D001BF9A3 /* FSResultCell.xib in Resources */,
+				1D6770432540131A00217475 /* FSFavoriteVC.xib in Resources */,
+				1D013F6F253D9940009AD484 /* FSResultVC.xib in Resources */,
 				1D013F46253D6F68009AD484 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,13 +200,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D013F3B253D6F67009AD484 /* AppDelegate.m in Sources */,
-				1D71CC6C253DDE4D001BF9A3 /* FlickrPhotoCell.m in Sources */,
+				1D71CC6C253DDE4D001BF9A3 /* FSResultCell.m in Sources */,
 				1D013F4C253D6F68009AD484 /* main.m in Sources */,
 				1D013F3E253D6F67009AD484 /* SceneDelegate.m in Sources */,
-				1D013F62253D928D009AD484 /* FlickrPhoto.m in Sources */,
-				1D013F58253D70A6009AD484 /* FlickrSearchDetailVC.m in Sources */,
+				1D013F62253D928D009AD484 /* FSPhoto.m in Sources */,
+				1D013F58253D70A6009AD484 /* FSInfoVC.m in Sources */,
 				1D013F5E253D7AB8009AD484 /* FlickrApi.m in Sources */,
-				1D013F6E253D9940009AD484 /* FlickrSearchResultVC.m in Sources */,
+				1D6770422540131A00217475 /* FSFavoriteVC.m in Sources */,
+				1DC400C22540019F00E848B4 /* DataManager.m in Sources */,
+				1D013F6E253D9940009AD484 /* FSResultVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

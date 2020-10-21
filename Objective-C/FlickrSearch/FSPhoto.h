@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface FlickrPhoto : NSObject
+@interface FSPhoto : NSObject
 
 @property (strong, nonatomic) NSString *photo_id;
 @property (strong, nonatomic) NSString *photo_owner;

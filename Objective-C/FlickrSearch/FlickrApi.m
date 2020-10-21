@@ -1,12 +1,12 @@
 //
-//  FlickrSearchHelper.m
+//  FlickrApi.m
 //  t5
 //
 //  Created by Alfred Yu on 2020/10/19.
 //
 
 #import "FlickrApi.h"
-#import "FlickrPhoto.h"
+#import "FSPhoto.h"
 
 @implementation FlickrApi
 

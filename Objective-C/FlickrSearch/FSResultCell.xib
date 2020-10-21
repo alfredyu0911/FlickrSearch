@@ -2,20 +2,26 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="id_FlickrPhotoCell" id="gTV-IL-0wX" customClass="FlickrPhotoCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="id_FSResultCell" id="gTV-IL-0wX" customClass="FSResultCell">
             <rect key="frame" x="0.0" y="0.0" width="213" height="205"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="213" height="205"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="owner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnk-Va-PSW">
+                        <rect key="frame" x="106.5" y="0.0" width="106.5" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJb-vo-2af">
                         <rect key="frame" x="0.0" y="0.0" width="106.5" height="0.0"/>
                         <constraints>
@@ -25,18 +31,19 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="owner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnk-Va-PSW">
-                        <rect key="frame" x="106.5" y="0.0" width="106.5" height="0.0"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="wGd-PC-dLq">
-                        <rect key="frame" x="0.0" y="0.0" width="213" height="205"/>
-                    </activityIndicatorView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tuf-dX-fMC">
                         <rect key="frame" x="0.0" y="0.0" width="213" height="205"/>
                     </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F6j-P5-gjP">
+                        <rect key="frame" x="183" y="10" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="YtB-sD-gxt"/>
+                            <constraint firstAttribute="height" constant="20" id="zJP-xO-jRz"/>
+                        </constraints>
+                    </imageView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="wGd-PC-dLq">
+                        <rect key="frame" x="0.0" y="0.0" width="213" height="205"/>
+                    </activityIndicatorView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
@@ -44,10 +51,12 @@
                 <constraint firstItem="wGd-PC-dLq" firstAttribute="top" secondItem="qnk-Va-PSW" secondAttribute="bottom" id="77I-QY-48a"/>
                 <constraint firstItem="JJb-vo-2af" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ARA-Q9-2if"/>
                 <constraint firstItem="qnk-Va-PSW" firstAttribute="height" secondItem="JJb-vo-2af" secondAttribute="height" id="B2q-aN-8GW"/>
+                <constraint firstAttribute="trailing" secondItem="F6j-P5-gjP" secondAttribute="trailing" constant="10" id="Cq9-RA-8lT"/>
                 <constraint firstItem="tuf-dX-fMC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="D7H-7m-gRY"/>
                 <constraint firstAttribute="trailing" secondItem="tuf-dX-fMC" secondAttribute="trailing" id="P1l-IO-VjY"/>
                 <constraint firstItem="JJb-vo-2af" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.5" id="Rfl-Lj-hf2"/>
                 <constraint firstItem="qnk-Va-PSW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="SrA-Qi-wmm"/>
+                <constraint firstItem="F6j-P5-gjP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Tza-qN-wSw"/>
                 <constraint firstAttribute="trailing" secondItem="wGd-PC-dLq" secondAttribute="trailing" id="UGB-TJ-y0J"/>
                 <constraint firstAttribute="bottom" secondItem="wGd-PC-dLq" secondAttribute="bottom" id="VU4-cM-0uV"/>
                 <constraint firstAttribute="trailing" secondItem="qnk-Va-PSW" secondAttribute="trailing" id="bGF-dC-AZJ"/>
@@ -60,6 +69,7 @@
             <size key="customSize" width="213" height="205"/>
             <connections>
                 <outlet property="activityView" destination="wGd-PC-dLq" id="Axc-ZK-ZF0"/>
+                <outlet property="favorite" destination="F6j-P5-gjP" id="Rrq-pD-bxk"/>
                 <outlet property="imageView" destination="tuf-dX-fMC" id="qi4-cT-Tdj"/>
                 <outlet property="label_id" destination="JJb-vo-2af" id="z96-Ok-0Wu"/>
                 <outlet property="label_owner" destination="qnk-Va-PSW" id="ldM-Av-tep"/>

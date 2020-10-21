@@ -5,16 +5,16 @@
 //  Created by Alfred Yu on 2020/10/19.
 //
 
-#import "FlickrPhoto.h"
+#import "FSPhoto.h"
 #import "FlickrApi.h"
 
-@interface FlickrPhoto () <NSXMLParserDelegate>
+@interface FSPhoto () <NSXMLParserDelegate>
 
 @property (strong, nonatomic) NSString *xmlContent;
 
 @end
 
-@implementation FlickrPhoto
+@implementation FSPhoto
 
 - (instancetype) initWithId: (NSString *)photoId andOwner: (NSString *) owner
 {

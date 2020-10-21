@@ -2,15 +2,16 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlickrSearchDetailVC">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FSInfoVC">
             <connections>
                 <outlet property="btn_confirm" destination="d47-wS-681" id="9rq-Vk-knZ"/>
+                <outlet property="tabBar" destination="uBW-0w-FuR" id="e1g-hq-dtV"/>
                 <outlet property="txt_page" destination="IsH-wX-XNf" id="30j-yw-m6h"/>
                 <outlet property="txt_text" destination="sS7-2M-0bZ" id="22V-RD-vgh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -74,15 +75,25 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBW-0w-FuR">
+                    <rect key="frame" x="0.0" y="779" width="414" height="83"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <items>
+                        <tabBarItem systemItem="favorites" id="zf6-S4-4Ff"/>
+                    </items>
+                </tabBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="d47-wS-681" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="1va-qy-DAr"/>
                 <constraint firstItem="7fH-Yg-Gz7" firstAttribute="top" secondItem="jx1-of-CfF" secondAttribute="bottom" constant="20" id="BGG-Tp-K2T"/>
+                <constraint firstItem="uBW-0w-FuR" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Dgg-fz-fxX"/>
                 <constraint firstItem="xq4-Wa-dmo" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="K1a-hh-ovb"/>
+                <constraint firstItem="uBW-0w-FuR" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="LW9-mG-HEo"/>
                 <constraint firstItem="xq4-Wa-dmo" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="M2X-kX-gwy"/>
                 <constraint firstItem="IsH-wX-XNf" firstAttribute="top" secondItem="sS7-2M-0bZ" secondAttribute="bottom" constant="20" id="Rqn-kI-MMa"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="uBW-0w-FuR" secondAttribute="bottom" id="Rx7-Io-YmL"/>
                 <constraint firstItem="jx1-of-CfF" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="SGI-Ir-ft6"/>
                 <constraint firstItem="sS7-2M-0bZ" firstAttribute="top" secondItem="xq4-Wa-dmo" secondAttribute="bottom" constant="50" id="T3q-Qr-Vgz"/>
                 <constraint firstItem="7fH-Yg-Gz7" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="50" id="Vuv-3K-5tu"/>

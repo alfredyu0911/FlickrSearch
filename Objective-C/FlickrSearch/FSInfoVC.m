@@ -1,25 +1,27 @@
 //
-//  FlickrSearchMainVC.m
+//  FSInfoVC.m
 //  t5
 //
 //  Created by Alfred Yu on 2020/10/19.
 //
 
-#import "FlickrSearchDetailVC.h"
+#import "FSInfoVC.h"
 #import "FlickrApi.h"
-#import "FlickrPhoto.h"
-#import "FlickrSearchResultVC.h"
+#import "FSPhoto.h"
+#import "FSResultVC.h"
+#import "FSFavoriteVC.h"
 
-@interface FlickrSearchDetailVC () <NSXMLParserDelegate>
+@interface FSInfoVC () <NSXMLParserDelegate, UITabBarDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *btn_confirm;
 @property (strong, nonatomic) IBOutlet UITextField *txt_text;
 @property (strong, nonatomic) IBOutlet UITextField *txt_page;
+@property (weak, nonatomic) IBOutlet UITabBar *tabBar;
 @property (strong, nonatomic) NSMutableArray *aryPhotoList;
 
 @end
 
-@implementation FlickrSearchDetailVC
+@implementation FSInfoVC
 
 - (void)viewDidLoad
 {
@@ -34,6 +36,8 @@
     [self.txt_page setText:@""];
     [self.txt_page setKeyboardType:UIKeyboardTypeNumberPad];
     [self.txt_page addTarget:self action:@selector(textFieldDidEndEditing:) forControlEvents:UIControlEventEditingChanged];
+    
+    [self.tabBar setDelegate:self];
 }
 
 - (BOOL) isNumber: (NSString *)text
@@ -90,7 +94,7 @@
 {
     if ( [elementName isEqual:@"photo"] )
     {
-        FlickrPhoto *photo = [[FlickrPhoto alloc] initWithId:[attributeDict valueForKey:@"id"] andOwner:[attributeDict valueForKey:@"owner"]];
+        FSPhoto *photo = [[FSPhoto alloc] initWithId:[attributeDict valueForKey:@"id"] andOwner:[attributeDict valueForKey:@"owner"]];
         [self.aryPhotoList addObject:photo];
     }
 }
@@ -100,9 +104,17 @@
     dispatch_async(dispatch_get_main_queue(), ^
     {
         // push to next view;
-        FlickrSearchResultVC *vc = [[FlickrSearchResultVC alloc] initWithPhotoList:self.aryPhotoList nibName:@"FlickrSearchResultVC" bundle:nil];
+        FSResultVC *vc = [[FSResultVC alloc] initWithPhotoList:self.aryPhotoList nibName:@"FSResultVC" bundle:nil];
         [self presentViewController:vc animated:YES completion:nil];
     });
+}
+
+#pragma mark - tab bar
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    FSFavoriteVC *vc = [[FSFavoriteVC alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end

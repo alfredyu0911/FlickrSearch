@@ -1,5 +1,5 @@
 //
-//  FlickrSearchMainVC.h
+//  FSInfoVC.h
 //  t5
 //
 //  Created by Alfred Yu on 2020/10/19.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FlickrSearchDetailVC : UIViewController
+@interface FSInfoVC : UIViewController
 
 @end
 

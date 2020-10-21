@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,6 +16,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="201" height="179"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKy-lP-aIS">
+                        <rect key="frame" x="100.5" y="0.0" width="100.5" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7z-in-lxL">
                         <rect key="frame" x="0.0" y="0.0" width="100.5" height="0.0"/>
                         <constraints>
@@ -25,18 +31,19 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKy-lP-aIS">
-                        <rect key="frame" x="100.5" y="0.0" width="100.5" height="0.0"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="F59-Q2-KST">
-                        <rect key="frame" x="0.0" y="0.0" width="201" height="179"/>
-                    </activityIndicatorView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z7g-lp-hTC">
                         <rect key="frame" x="0.0" y="0.0" width="201" height="179"/>
                     </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sui-xS-Rvs">
+                        <rect key="frame" x="171" y="10" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="YKU-U9-fYG"/>
+                            <constraint firstAttribute="height" constant="20" id="lnU-Cf-BHf"/>
+                        </constraints>
+                    </imageView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="F59-Q2-KST">
+                        <rect key="frame" x="0.0" y="0.0" width="201" height="179"/>
+                    </activityIndicatorView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -49,17 +56,20 @@
                 <constraint firstItem="m7z-in-lxL" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.5" id="MYf-pr-TQa"/>
                 <constraint firstItem="VKy-lP-aIS" firstAttribute="height" secondItem="m7z-in-lxL" secondAttribute="height" id="R6G-xt-FyL"/>
                 <constraint firstAttribute="bottom" secondItem="F59-Q2-KST" secondAttribute="bottom" id="XhD-Fc-5fb"/>
+                <constraint firstAttribute="trailing" secondItem="sui-xS-Rvs" secondAttribute="trailing" constant="10" id="aQl-Hs-msD"/>
                 <constraint firstItem="m7z-in-lxL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gSR-N6-Pcc"/>
                 <constraint firstItem="Z7g-lp-hTC" firstAttribute="top" secondItem="m7z-in-lxL" secondAttribute="bottom" id="i1l-X2-6f5"/>
                 <constraint firstItem="m7z-in-lxL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jYs-N3-gVM"/>
                 <constraint firstItem="VKy-lP-aIS" firstAttribute="leading" secondItem="m7z-in-lxL" secondAttribute="trailing" id="laj-Pw-bPC"/>
                 <constraint firstItem="VKy-lP-aIS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lyE-RU-HA8"/>
+                <constraint firstItem="sui-xS-Rvs" firstAttribute="top" secondItem="m7z-in-lxL" secondAttribute="bottom" constant="10" id="o1w-Nd-MK0"/>
                 <constraint firstAttribute="trailing" secondItem="F59-Q2-KST" secondAttribute="trailing" id="tFy-nv-TcY"/>
                 <constraint firstAttribute="trailing" secondItem="VKy-lP-aIS" secondAttribute="trailing" id="tHE-Jk-rGB"/>
             </constraints>
             <size key="customSize" width="201" height="179"/>
             <connections>
                 <outlet property="activityView" destination="F59-Q2-KST" id="pyS-eE-Cc9"/>
+                <outlet property="favorite" destination="sui-xS-Rvs" id="Hx8-Fo-1Tr"/>
                 <outlet property="imageView" destination="Z7g-lp-hTC" id="bkr-cA-9K2"/>
                 <outlet property="label_id" destination="m7z-in-lxL" id="JNn-al-BqK"/>
                 <outlet property="label_owner" destination="VKy-lP-aIS" id="2Be-Ap-Ar1"/>

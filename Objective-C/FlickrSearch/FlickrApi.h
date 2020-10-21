@@ -1,5 +1,5 @@
 //
-//  FlickrSearchHelper.h
+//  FlickrApi.h
 //  t5
 //
 //  Created by Alfred Yu on 2020/10/19.
