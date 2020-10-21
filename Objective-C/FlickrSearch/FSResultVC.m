@@ -103,7 +103,7 @@ const NSInteger kColumns = 2;
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat size = (self.view.frame.size.width - 2*kGap - (kColumns-1)*kGap) / 2.0;
-    return CGSizeMake(size, size);
+    return CGSizeMake(size, size+30);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section

@@ -80,6 +80,7 @@ class FSInfoVC: UIViewController, XMLParserDelegate, UITabBarDelegate
         if elementName == "photo"
         {
             let photo = FlickrPhoto(photoId: attributeDict["id"]!, owner: attributeDict["owner"]!)
+            photo.title = attributeDict["title"]!
             aryPhotoList.add(photo)
         }
     }

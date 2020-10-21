@@ -56,7 +56,7 @@
         
         if ( sqlite3_open(dbpath, &db) == SQLITE_OK )
         {
-            const char *sql = "CREATE TABLE IF NOT EXISTS photos (id INTEGER PRIMARY KEY AUTOINCREMENT, photo_id TEXT, photo_owner TEXT, source TEXT)";
+            const char *sql = "CREATE TABLE IF NOT EXISTS photos (id INTEGER PRIMARY KEY AUTOINCREMENT, photo_id TEXT, photo_owner TEXT, source TEXT, title TEXT)";
             
             char *errMsg;
             if ( sqlite3_exec(db, sql, NULL, NULL, &errMsg) != SQLITE_OK )
@@ -81,11 +81,11 @@
     }
 }
 
-+ (BOOL) addRecordByphotoId: (NSString *)photoId owner:(NSString *)owner source: (NSString *)source
++ (BOOL) addRecordByphotoId: (NSString *)photoId owner:(NSString *)owner source: (NSString *)source title: (NSString *)titleText
 {
     sqlite3 *db = [DataManager dbInstance];
     
-    NSString *str = [NSString stringWithFormat:@"insert into photos(photo_id, photo_owner, source) values('%@','%@', '%@')", photoId, owner, source];
+    NSString *str = [NSString stringWithFormat:@"insert into photos(photo_id, photo_owner, source, title) values('%@','%@', '%@', '%@')", photoId, owner, source, titleText];
     const char *cmd = str.UTF8String;
  
     char *errorMsg;
@@ -164,9 +164,11 @@
             NSString *photoid = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
             NSString *photoowner = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)];
             NSString *source = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 3)];
+            NSString *title = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 4)];
             
             FSPhoto *info = [[FSPhoto alloc] initWithId:photoid andOwner:photoowner];
             info.photo_source = source;
+            info.title = title;
             [list addObject:info];
             
             NSLog(@"%@, %@, %@", photoid, photoowner, source);

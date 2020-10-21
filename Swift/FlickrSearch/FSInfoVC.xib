@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flickr Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgL-vz-gDI">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Photo by Flickr API" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgL-vz-gDI">
                     <rect key="frame" x="20" y="64" width="374" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="uLD-z9-ke4"/>
@@ -73,10 +73,10 @@
                         <constraint firstAttribute="height" constant="50" id="4UG-LC-3Fa"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                    <state key="normal" title="Confirm"/>
+                    <state key="normal" title="Search"/>
                 </button>
                 <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sP-L5-HVm">
-                    <rect key="frame" x="0.0" y="779" width="414" height="83"/>
+                    <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <items>
                         <tabBarItem systemItem="favorites" id="OHc-81-OQ8"/>

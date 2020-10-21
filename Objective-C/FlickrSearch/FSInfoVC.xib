@@ -64,9 +64,9 @@
                         <constraint firstAttribute="height" constant="50" id="qHv-sB-JhR"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                    <state key="normal" title="Confirm"/>
+                    <state key="normal" title="Search"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flickr Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xq4-Wa-dmo">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Photo by Flickr API" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xq4-Wa-dmo">
                     <rect key="frame" x="20" y="64" width="374" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="nkP-kg-TyI"/>
@@ -106,7 +106,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="xq4-Wa-dmo" secondAttribute="trailing" constant="20" id="uEK-Q0-V1a"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="d47-wS-681" secondAttribute="trailing" constant="50" id="wEf-sq-9De"/>
             </constraints>
-            <point key="canvasLocation" x="14" y="103"/>
+            <point key="canvasLocation" x="13.043478260869566" y="102.45535714285714"/>
         </view>
     </objects>
     <resources>

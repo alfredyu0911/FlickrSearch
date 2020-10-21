@@ -18,6 +18,7 @@ class FSResultCell: UICollectionViewCell, FlickrPhoto_Delegate
     @IBOutlet weak var label_owner: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var favorite: UIImageView!
+    @IBOutlet weak var photoTitle: UILabel!
     @IBOutlet weak var activityView: UIActivityIndicatorView!
     var photoInfo: FlickrPhoto?
     
@@ -75,6 +76,8 @@ class FSResultCell: UICollectionViewCell, FlickrPhoto_Delegate
             favorite.isHidden = false
             activityView.isHidden = true
             activityView.stopAnimating()
+            
+            photoTitle.text = self.photoInfo?.title
         }
         else
         {
@@ -119,7 +122,7 @@ class FSResultCell: UICollectionViewCell, FlickrPhoto_Delegate
         }
         else if favorite.tag == FSResultCell.FavoriteStatus.UnSelected.rawValue
         {
-            _ = DataManager.addRecord(photoId: self.photoInfo!.photo_id, ownerid: self.photoInfo!.photo_owner, sourceurl: self.photoInfo!.photo_source)
+            _ = DataManager.addRecord(photoId: self.photoInfo!.photo_id, ownerid: self.photoInfo!.photo_owner, sourceurl: self.photoInfo!.photo_source, titletext: self.photoInfo!.title)
             setCellIsSelectedAsFavorite(isSelected: true)
         }
     }

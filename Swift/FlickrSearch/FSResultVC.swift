@@ -119,7 +119,7 @@ class FSResultVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         let noGap = (width - 2*kGap - (kColumns-1)*kGap)
         let size = noGap / 2.0
 
-        return CGSize(width: size, height: size)
+        return CGSize(width: size, height: size+30)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets

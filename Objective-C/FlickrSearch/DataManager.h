@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DataManager : NSObject
 
 + (BOOL) createDatabaseIfNotExist;
-+ (BOOL) addRecordByphotoId: (NSString *)photoId owner:(NSString *)owner source: (NSString *)source;
++ (BOOL) addRecordByphotoId: (NSString *)photoId owner:(NSString *)owner source: (NSString *)source title: (NSString *)titleText;
 + (BOOL) queryRecordByphotoId: (NSString *)photoId owner:(NSString *)owner source: (NSString *)source;
 + (BOOL) queryRecordByphotoId: (NSString *)photoId owner:(NSString *)owner;
 + (BOOL) deleteRecordByphotoId: (NSString *)photoId owner:(NSString *)owner;

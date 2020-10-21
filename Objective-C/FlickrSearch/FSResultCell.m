@@ -18,6 +18,8 @@ typedef enum enFavoriteStatus
 @interface FSResultCell () <FlickrPhoto_Delegate>
 
 @property (strong, nonatomic) FSPhoto *photoInfo;
+
+@property (weak, nonatomic) IBOutlet UILabel *photoTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *favorite;
 
 @end
@@ -53,6 +55,7 @@ typedef enum enFavoriteStatus
     [self.favorite setHidden:(status ? NO : YES)];
     [self.activityView setHidden:(status ? YES : NO)];
     (status ? [self.activityView stopAnimating] : [self.activityView startAnimating]);
+    [self.photoTitle setText:(status ? self.photoInfo.title : @"")];
     
     if ( [DataManager queryRecordByphotoId:self.photoInfo.photo_id owner:self.photoInfo.photo_owner] )
         [self setCellIsSelectedAsFavorite:YES];
@@ -109,7 +112,7 @@ typedef enum enFavoriteStatus
     }
     else
     {
-        [DataManager addRecordByphotoId:self.label_id.text owner:self.label_owner.text source:self.photoInfo.photo_source];
+        [DataManager addRecordByphotoId:self.label_id.text owner:self.label_owner.text source:self.photoInfo.photo_source title:self.photoInfo.title];
         [self setCellIsSelectedAsFavorite:YES];
     }
 }

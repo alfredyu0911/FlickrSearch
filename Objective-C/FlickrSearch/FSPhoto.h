@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *photo_id;
 @property (strong, nonatomic) NSString *photo_owner;
 @property (strong, nonatomic) NSString *photo_source;
+@property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) UIImage *image;
 
 @property (strong, nonatomic) id<FlickrPhoto_Delegate> delegate;

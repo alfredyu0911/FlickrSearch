@@ -17,6 +17,7 @@ class FlickrPhoto: NSObject, XMLParserDelegate
     var photo_id: String
     var photo_owner: String
     var photo_source: String
+    var title: String
     var image: UIImage?
     var delegate: FlickrPhoto_Delegate?
     
@@ -25,6 +26,7 @@ class FlickrPhoto: NSObject, XMLParserDelegate
         photo_id = photoId
         photo_owner = owner
         photo_source = ""
+        title = ""
         image = nil
         delegate = nil
         

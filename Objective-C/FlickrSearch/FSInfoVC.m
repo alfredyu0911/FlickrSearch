@@ -95,6 +95,7 @@
     if ( [elementName isEqual:@"photo"] )
     {
         FSPhoto *photo = [[FSPhoto alloc] initWithId:[attributeDict valueForKey:@"id"] andOwner:[attributeDict valueForKey:@"owner"]];
+        photo.title = [attributeDict valueForKey:@"title"];
         [self.aryPhotoList addObject:photo];
     }
 }
