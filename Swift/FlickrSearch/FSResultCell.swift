@@ -1,5 +1,5 @@
 //
-//  FlickrPhotoCell.swift
+//  FSResultCell.swift
 //  FlickrSearch
 //
 //  Created by Alfred Yu on 2020/10/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FlickrPhotoCell: UICollectionViewCell, FlickrPhoto_Delegate
+class FSResultCell: UICollectionViewCell, FlickrPhoto_Delegate
 {
     @IBOutlet weak var label_id: UILabel!
     @IBOutlet weak var label_owner: UILabel!

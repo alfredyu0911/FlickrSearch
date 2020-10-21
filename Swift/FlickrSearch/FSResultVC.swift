@@ -1,5 +1,5 @@
 //
-//  FlickrSearchResultVC.swift
+//  FSResultVC.swift
 //  FlickrSearch
 //
 //  Created by Alfred Yu on 2020/10/21.
@@ -29,7 +29,7 @@ extension UIColor
    }
 }
 
-class FlickrSearchResultVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+class FSResultVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var label_notFound: UILabel!
@@ -75,7 +75,7 @@ class FlickrSearchResultVC: UIViewController, UICollectionViewDelegate, UICollec
         collectionView.dataSource = self
         collectionView.keyboardDismissMode = .onDrag
 
-        collectionView.register(UINib(nibName: "FlickrPhotoCell", bundle: nil), forCellWithReuseIdentifier: "id_FlickrPhotoCell")
+        collectionView.register(UINib(nibName: "FSResultCell", bundle: nil), forCellWithReuseIdentifier: "id_FSResultCell")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -90,9 +90,9 @@ class FlickrSearchResultVC: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let dequeueCell = collectionView.dequeueReusableCell(withReuseIdentifier: "id_FlickrPhotoCell", for: indexPath)
+        let dequeueCell = collectionView.dequeueReusableCell(withReuseIdentifier: "id_FSResultCell", for: indexPath)
         
-        if let cell = dequeueCell as? FlickrPhotoCell
+        if let cell = dequeueCell as? FSResultCell
         {
             if indexPath.row < photoList.count
             {

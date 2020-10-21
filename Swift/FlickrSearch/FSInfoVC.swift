@@ -1,5 +1,5 @@
 //
-//  FlickrSearchDetailVC.swift
+//  FSInfoVC.swift
 //  FlickrSearch
 //
 //  Created by Alfred Yu on 2020/10/20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FlickrSearchDetailVC: UIViewController, XMLParserDelegate
+class FSInfoVC: UIViewController, XMLParserDelegate
 {
     @IBOutlet weak var txt_text: UITextField!
     @IBOutlet weak var txt_page: UITextField!
@@ -85,7 +85,7 @@ class FlickrSearchDetailVC: UIViewController, XMLParserDelegate
         DispatchQueue.main.async
         {
             // push to next view;
-            let vc = FlickrSearchResultVC(PhotoList: self.aryPhotoList, nibName: "FlickrSearchResultVC", bundle: nil)
+            let vc = FSResultVC(PhotoList: self.aryPhotoList, nibName: "FSResultVC", bundle: nil)
             self.present(vc, animated: true, completion: nil)
         }
     }

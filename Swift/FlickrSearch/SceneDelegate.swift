@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = FlickrSearchDetailVC()
+        window?.rootViewController = FSInfoVC()
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
     }
