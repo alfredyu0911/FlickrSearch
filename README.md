@@ -40,3 +40,11 @@
     * Flickr api 的部分主要於 `FlickrApi` 進行處理，response 資料分別於欲使用的物件進行解析
     * `FSPhoto` 物件為單筆 data 對應的資料結構，再以 NSMutableArray 集合、傳遞於各個物件之間
     * 進階題的部分使用 SQLite 儲存資料於本地端，並以 `DataManager` 物件作為 SQLite 的介面
+        * Objective-C 的部分使用 SQLite3
+        * Swift 的部分使用 SQLite.swift (by CocoaPods)
+
+## usage
+* Objective-C
+    * open `Objective-C/FlickrSearch.xcodeproj` to build & run
+* Swift
+    * open `Swift/FlickrSearch.xcworkspace` to build & run
