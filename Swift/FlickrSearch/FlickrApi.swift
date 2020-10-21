@@ -27,7 +27,6 @@ class FlickrApi: NSObject, XMLParserDelegate
     static func searchPhoto(text: String, page: Int, delegate: XMLParserDelegate)
     {
         let url = FlickrApi.apiURL_searchPhoto(text: text, perpage: page)
-        print(url)
         
         let task = FlickrApi.session().dataTask(with: url) { (data, response, error) in
             guard let data = data, error == nil else { return }

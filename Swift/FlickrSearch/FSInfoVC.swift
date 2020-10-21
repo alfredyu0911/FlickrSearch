@@ -7,11 +7,13 @@
 
 import UIKit
 
-class FSInfoVC: UIViewController, XMLParserDelegate
+class FSInfoVC: UIViewController, XMLParserDelegate, UITabBarDelegate
 {
     @IBOutlet weak var txt_text: UITextField!
     @IBOutlet weak var txt_page: UITextField!
     @IBOutlet weak var btn_confirm: UIButton!
+    @IBOutlet weak var tabBar: UITabBar!
+    
     var aryPhotoList: NSMutableArray!
     
     override func viewDidLoad()
@@ -27,6 +29,8 @@ class FSInfoVC: UIViewController, XMLParserDelegate
         txt_page.text = "";
         txt_page.keyboardType = UIKeyboardType.numberPad
         txt_page.addTarget(self, action: #selector(textFieldEdited), for: .editingChanged)
+        
+        tabBar.delegate = self
     }
     
     private func isNumber(text: String) -> Bool
@@ -88,5 +92,11 @@ class FSInfoVC: UIViewController, XMLParserDelegate
             let vc = FSResultVC(PhotoList: self.aryPhotoList, nibName: "FSResultVC", bundle: nil)
             self.present(vc, animated: true, completion: nil)
         }
+    }
+    
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem)
+    {
+        let vc = FSFavoriteVC()
+        self.present(vc, animated: true, completion: nil)
     }
 }

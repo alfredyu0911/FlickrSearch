@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FSInfoVC" customModule="FlickrSearch" customModuleProvider="target">
             <connections>
                 <outlet property="btn_confirm" destination="8e5-dI-qtj" id="Ucw-gi-rs0"/>
+                <outlet property="tabBar" destination="4sP-L5-HVm" id="0Ao-ya-iev"/>
                 <outlet property="txt_page" destination="H2W-Rl-Znz" id="VIw-6i-DqL"/>
                 <outlet property="txt_text" destination="R2D-Gf-Cyh" id="aMq-6s-92t"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -74,6 +75,13 @@
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                     <state key="normal" title="Confirm"/>
                 </button>
+                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sP-L5-HVm">
+                    <rect key="frame" x="0.0" y="779" width="414" height="83"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <items>
+                        <tabBarItem systemItem="favorites" id="OHc-81-OQ8"/>
+                    </items>
+                </tabBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -88,11 +96,14 @@
                 <constraint firstItem="8e5-dI-qtj" firstAttribute="top" secondItem="H2W-Rl-Znz" secondAttribute="bottom" constant="50" id="Jlv-ge-G84"/>
                 <constraint firstItem="DoM-8f-8U5" firstAttribute="top" secondItem="UgP-Gd-2tv" secondAttribute="bottom" constant="20" id="Ncc-VN-8rj"/>
                 <constraint firstItem="fgL-vz-gDI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="OzL-z2-T9o"/>
+                <constraint firstItem="4sP-L5-HVm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Wbs-db-Pde"/>
                 <constraint firstItem="UgP-Gd-2tv" firstAttribute="top" secondItem="fgL-vz-gDI" secondAttribute="bottom" constant="50" id="c12-rB-LlA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8e5-dI-qtj" secondAttribute="trailing" constant="50" id="cP5-kg-vBW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="R2D-Gf-Cyh" secondAttribute="trailing" constant="50" id="cr3-jc-MHh"/>
                 <constraint firstItem="fgL-vz-gDI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="d7N-je-xAs"/>
+                <constraint firstAttribute="trailing" secondItem="4sP-L5-HVm" secondAttribute="trailing" id="gDg-pc-uj1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fgL-vz-gDI" secondAttribute="trailing" constant="20" id="qi3-zj-0dG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4sP-L5-HVm" secondAttribute="bottom" id="x3g-ld-B2W"/>
                 <constraint firstItem="R2D-Gf-Cyh" firstAttribute="leading" secondItem="UgP-Gd-2tv" secondAttribute="trailing" constant="20" id="yqC-rM-TcJ"/>
             </constraints>
             <point key="canvasLocation" x="14" y="79"/>

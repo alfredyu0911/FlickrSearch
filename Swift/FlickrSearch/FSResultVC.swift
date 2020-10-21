@@ -36,6 +36,7 @@ class FSResultVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     var photoList: NSMutableArray!
     let kGap: CGFloat = 20.0
     let kColumns: CGFloat = 2.0
+    var str_notFound: String = "Nothing Found !!"
     
     init(PhotoList list: NSMutableArray?, nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
     {
@@ -51,6 +52,8 @@ class FSResultVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        label_notFound.text = str_notFound
         
         if photoList.count > 0
         {
