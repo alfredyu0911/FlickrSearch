@@ -36,6 +36,13 @@
     [self.txt_page addTarget:self action:@selector(textFieldDidEndEditing:) forControlEvents:UIControlEventEditingChanged];
 }
 
+- (BOOL) isNumber: (NSString *)text
+{
+    NSCharacterSet *alphaNums = [NSCharacterSet decimalDigitCharacterSet];
+    NSCharacterSet *inStringSet = [NSCharacterSet characterSetWithCharactersInString:text];
+    return [alphaNums isSupersetOfSet:inStringSet];
+}
+
 #pragma mark - button event
 
 - (void) btnDidClick: (UIButton *) btn
@@ -43,7 +50,19 @@
     self.aryPhotoList = [[NSMutableArray alloc] init];
     [self.aryPhotoList removeAllObjects];
     
-    [FlickrApi searchPhotoByText:self.txt_text.text andPage:[self.txt_page.text integerValue] delegate:self];
+    if ( [self isNumber:self.txt_page.text] )
+    {
+        [FlickrApi searchPhotoByText:self.txt_text.text
+                             andPage:[self.txt_page.text integerValue]
+                            delegate:self];
+    }
+    else
+    {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"invalid input" message:@"\"Per Page\" must be number" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alert addAction:ok];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 #pragma mark - textField event
